@@ -39,7 +39,7 @@ class OmekaClient:
         L.append('--' + BOUNDARY)
         body = CRLF.join(L)
         headers['content-length'] = str(len(body))
-		query= {}
+        query = {}
         return self.post("files", body, query, headers)
      
     def get_content_type(self, filename):
